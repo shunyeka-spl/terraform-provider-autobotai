@@ -1,11 +1,11 @@
 terraform {
   required_providers {
-    autobot = {
+    autobotai = {
       source  = "shunyeka/autobot/autobot"
     }
   }
 }
 
-provider "autobot" {
+provider "autobotai" {
   apikey = var.apikey
 }
