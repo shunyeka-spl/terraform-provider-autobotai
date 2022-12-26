@@ -1,11 +1,11 @@
 ---
-page_title: "autobot_gcp_integration"
+page_title: "autobotai_gcp_integration"
 description: |-
-  Provides a Autobot Gcp Integration.
+  Provides a autobotAI Gcp Integration.
 ---
 
-# Resource `autobot_gcp_integration`
-Provides a Autobot Conformity Integration.
+# Resource `autobotai_gcp_integration`
+Provides a autobotAI Conformity Integration.
 
 # Instruction on how to create a Gcp Integration
 
@@ -14,7 +14,7 @@ Provides a Autobot Conformity Integration.
 2. type,project_id,private_key_id,private_key,client_email,client_id,auth_uri,token_uri,auth_provider_x_cert_url,client_x_cert_url,alias,groups
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/gcp" folder for Autobot Gcp Integration, create the file if not exists and add the following vallues:
+1. Create terraform "main.tf" inside "example/gcp" folder for autobotAI Gcp Integration, create the file if not exists and add the following vallues:
     ## Example Usage 
     ```
     resource "autobot_gcp_integration" "gcp"{
@@ -33,7 +33,7 @@ Provides a Autobot Conformity Integration.
 
     }
     ```
-2. To use the Autobot Gcp Integration add the API key to the varibale.tf 
+2. To use the autobotAI Gcp Integration add the API key to the varibale.tf 
 3. create "variable.tf" inside "example/gcp" folder and add the following values:
     ## Example Usage 
     ```
@@ -47,7 +47,7 @@ Note: You can always change the values declared according to your choice.
 4. Run Terraform 
     1. Navigate to the Project Directory:
         ```
-        cd /path/autobot_integration
+        cd /path/terraform-provider-autobotai
 
         ``` 
     2. Create the Artifact:

@@ -10,7 +10,7 @@ import (
 
 func TestAccResourceAzureIntegration(t *testing.T) {
 	alias := "MyProject"
-	client_id := "autobot"
+	client_id := "autobotai"
 	tenant_id := "12233345687sr"
 	secret_key := "112840099457dcdce455417995"
 	subscription_id := "cewewwe"
@@ -39,7 +39,7 @@ func TestAccResourceAzureIntegration(t *testing.T) {
 
 func testAccCheckAzureIntegrationConfigBasic(alias, client_id, tenant_id, secret_key, subscription_id, groups, cspname string) string {
 	return fmt.Sprintf(`
-		resource "autobot_azure_integration" "azure" {
+		resource "autobotai_azure_integration" "azure" {
 			alias = "%s"
 			client_id = "%s"
 			tenant_id = "%s"
@@ -50,7 +50,7 @@ func testAccCheckAzureIntegrationConfigBasic(alias, client_id, tenant_id, secret
 
 		}
 		output "azureRead"{
-			value=autobot_azure_integration.azure
+			value=autobotai_azure_integration.azure
 		}
 	`,
 		alias, client_id, tenant_id, secret_key, subscription_id, groups, cspname)

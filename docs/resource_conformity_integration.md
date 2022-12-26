@@ -1,11 +1,11 @@
 ---
-page_title: "autobot_conformity_integration"
+page_title: "autobotai_conformity_integration"
 description: |-
-  Provides a Autobot Conformity Integration.
+  Provides a autobotAI Conformity Integration.
 ---
 
-# Resource `autobot_conformity_integration`
-Provides a Autobot Conformity Integration.
+# Resource `autobotai_conformity_integration`
+Provides a autobotAI Conformity Integration.
 
 # Instruction on how to create a Conformity Integration
 
@@ -14,17 +14,17 @@ Provides a Autobot Conformity Integration.
 2. alias, api_key,region,groups
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/conformity" folder for Autobot Conformity Integration, create the file if not exists and add the following vallues:
+1. Create terraform "main.tf" inside "example/conformity" folder for autobotAI Conformity Integration, create the file if not exists and add the following vallues:
     ## Example Usage 
     ```
-    resource "autobot_conformity_integration" "conformity" {
+    resource "autobotai_conformity_integration" "conformity" {
     alias            = "Conformity"
     groups=["test"]
     api_key="test@123"
     region=["ap-south-1"]
     }
     ```
-2. To use the Autobot Conformity Integration add the API key to the varibale.tf 
+2. To use the autobotAI Conformity Integration add the API key to the varibale.tf 
 3. create "variable.tf" inside "example/conformity" folder and add the following values:
     ## Example Usage 
     ```
@@ -38,7 +38,7 @@ Note: You can always change the values declared according to your choice.
 4. Run Terraform 
     1. Navigate to the Project Directory:
         ```
-        cd /path/autobot_integration
+        cd /path/terraform-provider-autobotai
 
         ``` 
     2. Create the Artifact:

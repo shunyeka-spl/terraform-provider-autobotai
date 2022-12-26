@@ -1,4 +1,4 @@
-resource "autobot_workload_security_integration" "wl_security" {
+resource "autobotai_workload_security_integration" "wl_security" {
     alias            = "MySecurityTesting"
     groups=["test"]
     api_version="v1"
@@ -7,5 +7,5 @@ resource "autobot_workload_security_integration" "wl_security" {
 }
 
 output "workload_security"{
-    value=autobot_workload_security_integration.wl_security
+    value=autobotai_workload_security_integration.wl_security
 }

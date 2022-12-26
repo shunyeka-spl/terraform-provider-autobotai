@@ -26,7 +26,7 @@ func init() {
 	testAccAutobotProvider = Provider()
 	testAccAutobotProvider.ConfigureContextFunc = testProviderConfigure
 	testAccAutobotProviders = map[string]*schema.Provider{
-		"autobot": testAccAutobotProvider,
+		"autobotai": testAccAutobotProvider,
 	}
 }
 

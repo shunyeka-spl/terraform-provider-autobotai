@@ -1,5 +1,5 @@
 
-resource "autobot_gcp_integration" "gcp"{
+resource "autobotai_gcp_integration" "gcp"{
     type="service_account"
     project_id="conformity-346910"
     private_key_id="016b4789c9544b1abf8243c81e0271f826330a2f"
@@ -16,5 +16,5 @@ resource "autobot_gcp_integration" "gcp"{
 }
 
 output "gcp"{
-    value=autobot_gcp_integration.gcp
+    value=autobotai_gcp_integration.gcp
 }

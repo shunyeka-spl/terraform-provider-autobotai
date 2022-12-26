@@ -1,4 +1,4 @@
-resource "autobot_azure_integration" "azure" {
+resource "autobotai_azure_integration" "azure" {
         alias            = "MyProject"
         client_id       = "autobot647"
         tenant_id     = "12233345687sr"
@@ -8,6 +8,6 @@ resource "autobot_azure_integration" "azure" {
         cspname="azure"
 }
 output "azureRead"{
-    value=autobot_azure_integration.azure
+    value=autobotai_azure_integration.azure
 }
 

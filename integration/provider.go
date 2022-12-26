@@ -20,15 +20,15 @@ func Provider() *schema.Provider {
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
-			"autobot_azure_integration":             resourceAzureIntegration(),
-			"autobot_gcp_integration":               resourceGcpIntegration(),
-			"autobot_ms_teams_integration":          resourceMSTeamsIntegration(),
-			"autobot_workload_security_integration": resourceWorkloadSecurityIntegration(),
-			"autobot_conformity_integration":        resourceConformityIntegration(),
-			"autobot_git_integration":               resourceGitIntegration(),
+			"autobotai_azure_integration":             resourceAzureIntegration(),
+			"autobotai_gcp_integration":               resourceGcpIntegration(),
+			"autobotai_ms_teams_integration":          resourceMSTeamsIntegration(),
+			"autobotai_workload_security_integration": resourceWorkloadSecurityIntegration(),
+			"autobotai_conformity_integration":        resourceConformityIntegration(),
+			"autobotai_git_integration":               resourceGitIntegration(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{
-			"autobot_external_id": dataSourceExternalId(),
+			"autobotai_external_id": dataSourceExternalId(),
 		},
 
 		ConfigureContextFunc: providerConfigure,

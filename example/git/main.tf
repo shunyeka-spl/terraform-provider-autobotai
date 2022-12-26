@@ -1,4 +1,4 @@
-resource "autobot_git_integration" "git" {
+resource "autobotai_git_integration" "git" {
     alias            = "MyGit"
     groups=["test"]
     host="aseweewewwew"
@@ -6,5 +6,5 @@ resource "autobot_git_integration" "git" {
 }
 
 output "git"{
-    value=autobot_git_integration.git
+    value=autobotai_git_integration.git
 }

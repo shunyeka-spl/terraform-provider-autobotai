@@ -1,4 +1,4 @@
-resource "autobot_conformity_integration" "conformity" {
+resource "autobotai_conformity_integration" "conformity" {
     alias            = "Conformity"
     groups=["test"]
     api_key="test@123"
@@ -6,5 +6,5 @@ resource "autobot_conformity_integration" "conformity" {
 }
 
 output "conformity"{
-    value=autobot_conformity_integration.conformity
+    value=autobotai_conformity_integration.conformity
 }

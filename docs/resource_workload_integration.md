@@ -1,11 +1,11 @@
 ---
-page_title: "autobot_workload_security_integration"
+page_title: "autobotai_workload_security_integration"
 description: |-
-  Provides a Autobot Workload Security Integration.
+  Provides a autobotAI Workload Security Integration.
 ---
 
-# Resource `autobot_workload_security_integration`
-Provides a Autobot Workload Security Integration.
+# Resource `autobotai_workload_security_integration`
+Provides a autobotAI Workload Security Integration.
 
 # Instruction on how to create a Workload Security Integration
 
@@ -14,10 +14,10 @@ Provides a Autobot Workload Security Integration.
 2. alias,groups,api_version,secretkey,url
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/workload_security" folder for Autobot Workload Security Integration, create the file if not exists and add the following vallues:
+1. Create terraform "main.tf" inside "example/workload_security" folder for autobotAI Workload Security Integration, create the file if not exists and add the following vallues:
     ## Example Usage 
     ```
-    resource "autobot_workload_security_integration" "wl_security" {
+    resource "autobotai_workload_security_integration" "wl_security" {
     alias            = "MySEcurityTesting"
     groups=["test"]
     api_version="v1"
@@ -26,7 +26,7 @@ Provides a Autobot Workload Security Integration.
     } 
 
     ```
-2. To use the Autobot Workload Security Integration add the API key to the varibale.tf 
+2. To use the autobotAI Workload Security Integration add the API key to the varibale.tf 
 3. create "variable.tf" inside "example/git" folder and add the following values:
     ## Example Usage 
     ```
@@ -40,7 +40,7 @@ Note: You can always change the values declared according to your choice.
 4. Run Terraform 
     1. Navigate to the Project Directory:
         ```
-        cd /path/autobot_integration
+        cd /path/terraform-provider-autobotai
 
         ``` 
     2. Create the Artifact:
