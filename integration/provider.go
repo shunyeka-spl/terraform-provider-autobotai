@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -16,7 +16,13 @@ func Provider() *schema.Provider {
 				Type:        schema.TypeString,
 				Sensitive:   true,
 				Required:    true,
-				DefaultFunc: schema.EnvDefaultFunc("APIKEY", nil),
+				DefaultFunc: schema.EnvDefaultFunc("ApiKey", nil),
+			},
+			"url": {
+				Type:        schema.TypeString,
+				Sensitive:   true,
+				Required:    true,
+				DefaultFunc: schema.EnvDefaultFunc("url", nil),
 			},
 		},
 		ResourcesMap: map[string]*schema.Resource{
@@ -37,9 +43,10 @@ func Provider() *schema.Provider {
 
 func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}, diag.Diagnostics) {
 	apiKey := d.Get("apikey").(string)
+	url := d.Get("url").(string)
 	var diags diag.Diagnostics
 
-	c, err := pkg.NewClient(apiKey)
+	c, err := pkg.NewClient(apiKey, url)
 	if err != nil {
 		diags = append(diags, diag.Diagnostic{
 			Severity: diag.Error,

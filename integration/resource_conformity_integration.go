@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -19,35 +19,35 @@ func resourceConformityIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"userid": {
+			"user_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accountid": {
+			"account_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accesstoken": {
+			"access_token": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"createdat": {
+			"created_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"updatedat": {
+			"updated_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"indexfailures": {
+			"index_failures": {
 				Type:     schema.TypeInt,
 				Computed: true,
 			},
-			"isunauthorized": {
+			"is_unauthorized": {
 				Type:     schema.TypeBool,
 				Computed: true,
 			},
-			"lastused": {
+			"last_used": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -115,10 +115,10 @@ func resourceConformityIntegrationRead(ctx context.Context, d *schema.ResourceDa
 		return diag.FromErr(err)
 	}
 
-	if err := d.Set("userid", ConformityDetails.UserId); err != nil {
+	if err := d.Set("user_id", ConformityDetails.UserId); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accountid", ConformityDetails.AccountId); err != nil {
+	if err := d.Set("account_id", ConformityDetails.AccountId); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("cspname", ConformityDetails.CspName); err != nil {
@@ -130,22 +130,22 @@ func resourceConformityIntegrationRead(ctx context.Context, d *schema.ResourceDa
 	if err := d.Set("groups", ConformityDetails.Groups); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accesstoken", ConformityDetails.AccessToken); err != nil {
+	if err := d.Set("access_token", ConformityDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("createdat", ConformityDetails.CreatedAt); err != nil {
+	if err := d.Set("create_dat", ConformityDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("updatedat", ConformityDetails.UpdatedAt); err != nil {
+	if err := d.Set("update_dat", ConformityDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("indexfailures", ConformityDetails.IndexFailures); err != nil {
+	if err := d.Set("index_failures", ConformityDetails.IndexFailures); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("isunauthorized", ConformityDetails.IsUnauthorized); err != nil {
+	if err := d.Set("is_unauthorized", ConformityDetails.IsUnauthorized); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("lastused", ConformityDetails.LastUsed); err != nil {
+	if err := d.Set("last_used", ConformityDetails.LastUsed); err != nil {
 		return diag.FromErr(err)
 	}
 	d.SetId(conformityId)

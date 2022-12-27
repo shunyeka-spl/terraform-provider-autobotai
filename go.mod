@@ -1,4 +1,4 @@
-module autobot_integration
+module autobotai_integration
 
 go 1.19
 

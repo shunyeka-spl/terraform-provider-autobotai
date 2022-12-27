@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -19,35 +19,35 @@ func resourceMSTeamsIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"userid": {
+			"user_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accountid": {
+			"account_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accesstoken": {
+			"access_token": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"createdat": {
+			"created_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"updatedat": {
+			"updated_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"indexfailures": {
+			"index_failures": {
 				Type:     schema.TypeInt,
 				Computed: true,
 			},
-			"isunauthorized": {
+			"is_unauthorized": {
 				Type:     schema.TypeBool,
 				Computed: true,
 			},
-			"lastused": {
+			"last_used": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -104,10 +104,10 @@ func resourceMSTeamsIntegrationRead(ctx context.Context, d *schema.ResourceData,
 		return diag.FromErr(err)
 	}
 
-	if err := d.Set("userid", msTeamsDetails.UserId); err != nil {
+	if err := d.Set("user_id", msTeamsDetails.UserId); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accountid", msTeamsDetails.AccountId); err != nil {
+	if err := d.Set("account_id", msTeamsDetails.AccountId); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("cspname", msTeamsDetails.CspName); err != nil {
@@ -119,22 +119,22 @@ func resourceMSTeamsIntegrationRead(ctx context.Context, d *schema.ResourceData,
 	if err := d.Set("groups", msTeamsDetails.Groups); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accesstoken", msTeamsDetails.AccessToken); err != nil {
+	if err := d.Set("access_token", msTeamsDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("createdat", msTeamsDetails.CreatedAt); err != nil {
+	if err := d.Set("created_at", msTeamsDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("updatedat", msTeamsDetails.UpdatedAt); err != nil {
+	if err := d.Set("updated_at", msTeamsDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("indexfailures", msTeamsDetails.IndexFailures); err != nil {
+	if err := d.Set("index_failures", msTeamsDetails.IndexFailures); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("isunauthorized", msTeamsDetails.IsUnauthorized); err != nil {
+	if err := d.Set("is_unauthorized", msTeamsDetails.IsUnauthorized); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("lastused", msTeamsDetails.LastUsed); err != nil {
+	if err := d.Set("last_used", msTeamsDetails.LastUsed); err != nil {
 		return diag.FromErr(err)
 	}
 	d.SetId(msTeamsId)

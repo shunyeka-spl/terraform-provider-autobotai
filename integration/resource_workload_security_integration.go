@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -19,35 +19,35 @@ func resourceWorkloadSecurityIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"userid": {
+			"user_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accountid": {
+			"account_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accesstoken": {
+			"access_token": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"createdat": {
+			"created_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"updatedat": {
+			"updated_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"indexfailures": {
+			"index_failures": {
 				Type:     schema.TypeInt,
 				Computed: true,
 			},
-			"isunauthorized": {
+			"is_unauthorized": {
 				Type:     schema.TypeBool,
 				Computed: true,
 			},
-			"lastused": {
+			"last_used": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -55,7 +55,7 @@ func resourceWorkloadSecurityIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"secretkey": {
+			"secret_key": {
 				Type:     schema.TypeString,
 				Required: true,
 			},
@@ -93,7 +93,7 @@ func resourceWorkloadSecurityIntegrationCreate(ctx context.Context, d *schema.Re
 	payload.Payload.Alias = d.Get("alias").(string)
 	payload.Payload.Url = d.Get("url").(string)
 	payload.Payload.ApiVersion = d.Get("api_version").(string)
-	payload.Payload.SecretKey = d.Get("secretkey").(string)
+	payload.Payload.SecretKey = d.Get("secret_key").(string)
 	payload.Payload.Groups = d.Get("groups")
 	payload.Payload.CspName = d.Get("cspname").(string)
 
@@ -114,10 +114,10 @@ func resourceWorkloadSecurityIntegrationRead(ctx context.Context, d *schema.Reso
 		return diag.FromErr(err)
 	}
 
-	if err := d.Set("userid", workloadSecurityDetails.UserId); err != nil {
+	if err := d.Set("user_id", workloadSecurityDetails.UserId); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accountid", workloadSecurityDetails.AccountId); err != nil {
+	if err := d.Set("account_id", workloadSecurityDetails.AccountId); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("cspname", workloadSecurityDetails.CspName); err != nil {
@@ -129,22 +129,22 @@ func resourceWorkloadSecurityIntegrationRead(ctx context.Context, d *schema.Reso
 	if err := d.Set("groups", workloadSecurityDetails.Groups); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accesstoken", workloadSecurityDetails.AccessToken); err != nil {
+	if err := d.Set("access_token", workloadSecurityDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("createdat", workloadSecurityDetails.CreatedAt); err != nil {
+	if err := d.Set("created_at", workloadSecurityDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("updatedat", workloadSecurityDetails.UpdatedAt); err != nil {
+	if err := d.Set("updated_at", workloadSecurityDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("indexfailures", workloadSecurityDetails.IndexFailures); err != nil {
+	if err := d.Set("index_failures", workloadSecurityDetails.IndexFailures); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("isunauthorized", workloadSecurityDetails.IsUnauthorized); err != nil {
+	if err := d.Set("is_unauthorized", workloadSecurityDetails.IsUnauthorized); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("lastused", workloadSecurityDetails.LastUsed); err != nil {
+	if err := d.Set("last_used", workloadSecurityDetails.LastUsed); err != nil {
 		return diag.FromErr(err)
 	}
 	d.SetId(workloadSecurityId)
@@ -154,7 +154,7 @@ func resourceWorkloadSecurityIntegrationRead(ctx context.Context, d *schema.Reso
 func resourceWorkloadSecurityIntegrationUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	var diags diag.Diagnostics
 
-	if d.HasChange("alias") || d.HasChange("url") || d.HasChange("secretkey") || d.HasChange("api_version") || d.HasChange("groups") || d.HasChange("cspname") {
+	if d.HasChange("alias") || d.HasChange("url") || d.HasChange("secret_key") || d.HasChange("api_version") || d.HasChange("groups") || d.HasChange("cspname") {
 		resourceWorkloadSecurityIntegrationDelete(ctx, d, m)
 		resourceWorkloadSecurityIntegrationCreate(ctx, d, m)
 	}

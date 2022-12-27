@@ -12,9 +12,9 @@ type Client struct {
 }
 
 // create a client with region and apiKey
-func NewClient(apikey string) (*Client, error) {
+func NewClient(apikey string, url string) (*Client, error) {
 
-	client := Client{Apikey: apikey, Url: getUrl(), HttpClient: &http.Client{
+	client := Client{Apikey: apikey, Url: url, HttpClient: &http.Client{
 		Timeout: time.Second * 60,
 	}}
 
@@ -39,6 +39,6 @@ func (c *Client) validateApiKey() (*ApiList, error) {
 	return &apiKeyListResult, nil
 }
 
-func getUrl() string {
-	return ("https://api-test.autobot.live")
-}
+// func getUrl() string {
+// 	return ("https://api-test.autobot.live")
+// }

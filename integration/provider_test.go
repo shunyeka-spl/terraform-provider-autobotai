@@ -10,23 +10,23 @@ import (
 	"os"
 	"regexp"
 
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"testing"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
-var testAccAutobotProviders map[string]*schema.Provider
-var testAccAutobotProvider *schema.Provider
+var testAccAutobotAIProviders map[string]*schema.Provider
+var testAccAutobotAIProvider *schema.Provider
 
 var testServer *httptest.Server
 
 func init() {
-	testAccAutobotProvider = Provider()
-	testAccAutobotProvider.ConfigureContextFunc = testProviderConfigure
-	testAccAutobotProviders = map[string]*schema.Provider{
-		"autobotai": testAccAutobotProvider,
+	testAccAutobotAIProvider = Provider()
+	testAccAutobotAIProvider.ConfigureContextFunc = testProviderConfigure
+	testAccAutobotAIProviders = map[string]*schema.Provider{
+		"autobotai": testAccAutobotAIProvider,
 	}
 }
 
@@ -35,8 +35,9 @@ func TestProvider(t *testing.T) {
 		t.Fatalf("err: %s", err)
 	}
 }
-func testAccAutobotPreCheck(t *testing.T) {
-	os.Setenv("APIKEY", "test-apikey")
+func testAccAutobotAIPreCheck(t *testing.T) {
+	os.Setenv("ApiKey", "test-apikey")
+	os.Setenv("url", "test-url")
 }
 
 func testProviderConfigure(ctx context.Context, d *schema.ResourceData) (interface{}, diag.Diagnostics) {

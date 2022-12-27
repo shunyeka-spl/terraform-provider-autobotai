@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -15,35 +15,35 @@ func resourceGcpIntegration() *schema.Resource {
 		UpdateContext: resourceGcpIntegrationUpdate,
 		DeleteContext: resourceGcpIntegrationDelete,
 		Schema: map[string]*schema.Schema{
-			"userid": {
+			"user_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accountid": {
+			"account_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accesstoken": {
+			"access_token": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"createdat": {
+			"created_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"updatedat": {
+			"updated_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"indexfailures": {
+			"index_failures": {
 				Type:     schema.TypeInt,
 				Computed: true,
 			},
-			"isunauthorized": {
+			"is_unauthorized": {
 				Type:     schema.TypeBool,
 				Computed: true,
 			},
-			"lastused": {
+			"last_used": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -149,10 +149,10 @@ func resourceGcpIntegrationRead(ctx context.Context, d *schema.ResourceData, m i
 		return diag.FromErr(err)
 	}
 
-	if err := d.Set("userid", gcpDetails.UserId); err != nil {
+	if err := d.Set("user_id", gcpDetails.UserId); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accountid", gcpDetails.AccountId); err != nil {
+	if err := d.Set("account_id", gcpDetails.AccountId); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("cspname", gcpDetails.CspName); err != nil {
@@ -164,22 +164,22 @@ func resourceGcpIntegrationRead(ctx context.Context, d *schema.ResourceData, m i
 	if err := d.Set("groups", gcpDetails.Groups); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accesstoken", gcpDetails.AccessToken); err != nil {
+	if err := d.Set("access_token", gcpDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("createdat", gcpDetails.CreatedAt); err != nil {
+	if err := d.Set("created_at", gcpDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("updatedat", gcpDetails.UpdatedAt); err != nil {
+	if err := d.Set("updated_at", gcpDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("indexfailures", gcpDetails.IndexFailures); err != nil {
+	if err := d.Set("index_failures", gcpDetails.IndexFailures); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("isunauthorized", gcpDetails.IsUnauthorized); err != nil {
+	if err := d.Set("is_unauthorized", gcpDetails.IsUnauthorized); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("lastused", gcpDetails.LastUsed); err != nil {
+	if err := d.Set("last_used", gcpDetails.LastUsed); err != nil {
 		return diag.FromErr(err)
 	}
 	d.SetId(GcpId)

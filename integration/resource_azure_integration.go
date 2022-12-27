@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -19,36 +19,36 @@ func resourceAzureIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"userid": {
+			"user_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accountid": {
+			"account_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accesstoken": {
+			"access_token": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"createdat": {
+			"created_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"updatedat": {
+			"updated_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 				Optional: true,
 			},
-			"indexfailures": {
+			"index_failures": {
 				Type:     schema.TypeInt,
 				Computed: true,
 			},
-			"isunauthorized": {
+			"is_unauthorized": {
 				Type:     schema.TypeBool,
 				Computed: true,
 			},
-			"lastused": {
+			"last_used": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -124,10 +124,10 @@ func resourceAzureIntegrationRead(ctx context.Context, d *schema.ResourceData, m
 		return diag.FromErr(err)
 	}
 
-	if err := d.Set("userid", azureDetails.UserId); err != nil {
+	if err := d.Set("user_id", azureDetails.UserId); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accountid", azureDetails.AccountId); err != nil {
+	if err := d.Set("account_id", azureDetails.AccountId); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("cspname", azureDetails.CspName); err != nil {
@@ -139,22 +139,22 @@ func resourceAzureIntegrationRead(ctx context.Context, d *schema.ResourceData, m
 	if err := d.Set("groups", azureDetails.Groups); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accesstoken", azureDetails.AccessToken); err != nil {
+	if err := d.Set("access_token", azureDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("createdat", azureDetails.CreatedAt); err != nil {
+	if err := d.Set("created_at", azureDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("updatedat", azureDetails.UpdatedAt); err != nil {
+	if err := d.Set("updated_at", azureDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("indexfailures", azureDetails.IndexFailures); err != nil {
+	if err := d.Set("index_failures", azureDetails.IndexFailures); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("isunauthorized", azureDetails.IsUnauthorized); err != nil {
+	if err := d.Set("is_unauthorized", azureDetails.IsUnauthorized); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("lastused", azureDetails.LastUsed); err != nil {
+	if err := d.Set("last_used", azureDetails.LastUsed); err != nil {
 		return diag.FromErr(err)
 	}
 	d.SetId(azureId)
@@ -163,7 +163,7 @@ func resourceAzureIntegrationRead(ctx context.Context, d *schema.ResourceData, m
 }
 func resourceAzureIntegrationUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 	var diags diag.Diagnostics
-	if d.HasChange("alias") || d.HasChange("client_id") || d.HasChange("tenant_id") || d.HasChange("subscription_id") || d.HasChange("groups") || d.HasChange("cspname") {
+	if d.HasChange("alias") || d.HasChange("client_id") || d.HasChange("tenant_id") || d.HasChange("subscription_id") || d.HasChange("groups") || d.HasChange("cspname") || d.HasChange("secret_key") {
 		resourceAzureIntegrationDelete(ctx, d, m)
 		resourceAzureIntegrationCreate(ctx, d, m)
 	}

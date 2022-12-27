@@ -1,7 +1,7 @@
 package integration
 
 import (
-	"autobot_integration/pkg"
+	"autobotai_integration/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -19,35 +19,35 @@ func resourceGitIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			"userid": {
+			"user_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accountid": {
+			"account_id": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"accesstoken": {
+			"access_token": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"createdat": {
+			"created_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"updatedat": {
+			"updated_at": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
-			"indexfailures": {
+			"index_failures": {
 				Type:     schema.TypeInt,
 				Computed: true,
 			},
-			"isunauthorized": {
+			"is_unauthorized": {
 				Type:     schema.TypeBool,
 				Computed: true,
 			},
-			"lastused": {
+			"last_used": {
 				Type:     schema.TypeString,
 				Computed: true,
 			},
@@ -109,10 +109,10 @@ func resourceGitIntegrationRead(ctx context.Context, d *schema.ResourceData, m i
 		return diag.FromErr(err)
 	}
 
-	if err := d.Set("userid", gitDetails.UserId); err != nil {
+	if err := d.Set("user_id", gitDetails.UserId); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accountid", gitDetails.AccountId); err != nil {
+	if err := d.Set("account_id", gitDetails.AccountId); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("cspname", gitDetails.CspName); err != nil {
@@ -124,22 +124,22 @@ func resourceGitIntegrationRead(ctx context.Context, d *schema.ResourceData, m i
 	if err := d.Set("groups", gitDetails.Groups); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("accesstoken", gitDetails.AccessToken); err != nil {
+	if err := d.Set("access_token", gitDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("createdat", gitDetails.CreatedAt); err != nil {
+	if err := d.Set("create_dat", gitDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("updatedat", gitDetails.UpdatedAt); err != nil {
+	if err := d.Set("updated_at", gitDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("indexfailures", gitDetails.IndexFailures); err != nil {
+	if err := d.Set("index_failures", gitDetails.IndexFailures); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("isunauthorized", gitDetails.IsUnauthorized); err != nil {
+	if err := d.Set("is_unauthorized", gitDetails.IsUnauthorized); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("lastused", gitDetails.LastUsed); err != nil {
+	if err := d.Set("last_used", gitDetails.LastUsed); err != nil {
 		return diag.FromErr(err)
 	}
 	d.SetId(gitId)

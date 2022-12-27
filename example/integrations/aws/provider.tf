@@ -1,8 +1,8 @@
 
 terraform {
   required_providers {
-    autobot = {
-      source  = "shunyeka/autobot/autobot"
+    autobotai = {
+      source  = "shunyeka-spl/autobotai/autobotai"
     }
     aws = {
       source  = "hashicorp/aws"
@@ -10,6 +10,7 @@ terraform {
     }
   }
 }
-provider "autobot" {
+provider "autobotai" {
   apikey = var.apikey
+  url =var.url
 }
