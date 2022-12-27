@@ -38,7 +38,3 @@ func (c *Client) validateApiKey() (*ApiList, error) {
 	}
 	return &apiKeyListResult, nil
 }
-
-// func getUrl() string {
-// 	return ("https://api-test.autobot.live")
-// }
