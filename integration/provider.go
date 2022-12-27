@@ -50,7 +50,7 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 	if err != nil {
 		diags = append(diags, diag.Diagnostic{
 			Severity: diag.Error,
-			Summary:  "Unable to create Conformity client",
+			Summary:  "Unable to create Autobot client",
 			Detail:   err.Error(),
 		})
 
