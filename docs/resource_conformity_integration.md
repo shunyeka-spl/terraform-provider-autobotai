@@ -10,7 +10,7 @@ Provides an autobotAI Conformity Integration.
 # Instruction on how to create a Conformity Integration
 
 ## Required things 
-1. apikey
+1. apikey and url
 2. alias, api_key,region,groups
 
 ## Steps 

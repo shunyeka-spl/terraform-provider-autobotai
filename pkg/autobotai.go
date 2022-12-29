@@ -100,8 +100,8 @@ func newRequest(c *Client, methodType string, url_path string, payload io.Reader
 	}
 
 	if resp.StatusCode != 200 {
-		log_debug(fmt.Sprintf("Conformity request error: %d", resp.StatusCode))
-		log_debug("Conformity response body error" + string(body))
+		log_debug(fmt.Sprintf("autobotAI request error: %d", resp.StatusCode))
+		log_debug("autobotAI response body error" + string(body))
 
 		return body, errors.New(string(body))
 	}

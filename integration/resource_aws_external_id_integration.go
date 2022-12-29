@@ -11,9 +11,12 @@ import (
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 )
 
-func dataSourceExternalId() *schema.Resource {
+func resourceGetExternalId() *schema.Resource {
 	return &schema.Resource{
-		ReadContext: dataSourceExternalIdRead,
+		CreateContext: resourceExternalIdGet,
+		ReadContext:   resourceExternalIdRead,
+		UpdateContext: resourceExternalIdUpdate,
+		DeleteContext: resourceExternalIdDelete,
 		Schema: map[string]*schema.Schema{
 			"alias": {
 				Type:     schema.TypeString,
@@ -46,7 +49,7 @@ func dataSourceExternalId() *schema.Resource {
 		},
 	}
 }
-func dataSourceExternalIdRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+func resourceExternalIdGet(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 
 	client := m.(*pkg.Client)
 
@@ -74,5 +77,23 @@ func dataSourceExternalIdRead(ctx context.Context, d *schema.ResourceData, m int
 	}
 
 	d.SetId(strconv.FormatInt(time.Now().Unix(), 10))
+	return diags
+}
+func resourceExternalIdRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+
+	var diags diag.Diagnostics
+
+	return diags
+}
+func resourceExternalIdUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+
+	var diags diag.Diagnostics
+
+	return diags
+}
+func resourceExternalIdDelete(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+
+	var diags diag.Diagnostics
+
 	return diags
 }

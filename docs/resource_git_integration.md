@@ -10,7 +10,7 @@ Provides an autobotAI Git  Integration.
 # Instruction on how to create a Git Integration
 
 ## Required things 
-1. apikey
+1. apikey and url
 2. alias,groups,host,token
 
 ## Steps 

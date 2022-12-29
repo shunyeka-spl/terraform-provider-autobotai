@@ -10,11 +10,11 @@ Provides an autobotAI Workload Security Integration.
 # Instruction on how to create a Workload Security Integration
 
 ## Required things 
-1. apikey
+1. apikey and url
 2. alias,groups,api_version,secretkey,url
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/integrations/workload_security" folder for autobotAI Workload Security Integration, create the file if not exists and add the following vallues:
+1. Create terraform "main.tf" inside "example/integrations/workload_security" folder for autobotAI Workload Security Integration, create the file if not exists and add the following values:
     ## Example Usage 
     ```
     resource "autobotai_workload_security_integration" "wl_security" {
@@ -26,4 +26,4 @@ Provides an autobotAI Workload Security Integration.
     } 
 
     ```
-2. To use the autobotAI Workload Security Integration follow the "provider_setup.md"
+2. To use the autobotAI Workload Security Integration follow the "index.md"

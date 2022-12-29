@@ -1,8 +1,8 @@
 TEST?=$$(go list ./... | grep -v 'vendor')
 HOSTNAME=shunyeka-spl
 NAMESPACE=autobotai
-NAME=autobotai
-BINARY=terraform-provider-${NAME}
+NAME=autobotAI
+BINARY=terraform-provider-${NAMESPACE}
 VERSION=0.3
 OS_ARCH=linux_amd64
 

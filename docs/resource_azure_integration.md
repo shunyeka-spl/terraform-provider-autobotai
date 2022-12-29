@@ -9,11 +9,11 @@ Provides an autobotAI Azure Integration.
 
 # Instruction for how to create a Azure Integration
 ## Required things 
-1. apikey
+1. apikey and url
 2. alias, client_id,tenant_id,secret_key,subscription_id,groups,cspname
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/integrations/azure" folder for autobotAI Azure Integration, create the file if not exists and add the following vallues:
+1. Create terraform "main.tf" inside "example/integrations/azure" folder for autobotAI Azure Integration, create the file if not  exists and add the following values:
     ## Example Usage 
     ```
         resource "autobotai_azure_integration" "azure" {  
@@ -26,4 +26,4 @@ Provides an autobotAI Azure Integration.
         cspname="azure"
     }   
     ```
-2. To use the autobotAI Azure Integration follow the "provider_setup.md"
+2. To use the autobotAI Azure Integration follow the "index.md"

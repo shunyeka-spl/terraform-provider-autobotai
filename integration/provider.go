@@ -32,10 +32,10 @@ func Provider() *schema.Provider {
 			"autobotai_workload_security_integration": resourceWorkloadSecurityIntegration(),
 			"autobotai_conformity_integration":        resourceConformityIntegration(),
 			"autobotai_git_integration":               resourceGitIntegration(),
+			"autobotai_external_id":                   resourceGetExternalId(),
+			"autobotai_aws_integration":               resourceAwsIntegration(),
 		},
-		DataSourcesMap: map[string]*schema.Resource{
-			"autobotai_external_id": dataSourceExternalId(),
-		},
+		DataSourcesMap: map[string]*schema.Resource{},
 
 		ConfigureContextFunc: providerConfigure,
 	}
