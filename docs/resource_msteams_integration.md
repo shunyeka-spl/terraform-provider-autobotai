@@ -10,7 +10,7 @@ Provides an autobotAI Ms Teams Integration.
 # Instruction on how to create a Ms Teams Integration
 
 ## Required things 
-1. apikey
+1. apikey and url
 2. alias,groups,webhook
 
 ## Steps 

@@ -3,7 +3,6 @@ package pkg
 import (
 	"encoding/json"
 	"fmt"
-	"log"
 	"strings"
 )
 
@@ -31,8 +30,7 @@ func (c *Client) CreateGcpInetgration(GcpIntegrationPayload GCPIntegration) (str
 func (c *Client) GetGcpInetgration(GcpIntegrationId string) (*IntegrationsResponse, error) {
 	GcpGetIntergration := IntegrationsResponse{}
 
-	response, err := c.ClientRequest(Get{}, fmt.Sprintf("/integrations/id/%s", GcpIntegrationId), nil, "", &GcpGetIntergration)
-	log.Println("[DEBUG] The  Gcp Read Integration is data is  ", strings.NewReader(string(response)))
+	_, err := c.ClientRequest(Get{}, fmt.Sprintf("/integrations/id/%s", GcpIntegrationId), nil, "", &GcpGetIntergration)
 
 	if err != nil {
 		return nil, err

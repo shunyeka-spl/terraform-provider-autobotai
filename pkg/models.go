@@ -12,7 +12,9 @@ type AzureIntegrations struct {
 		CspName        string      `json:"cspName"`
 	} `json:"payload"`
 }
-
+type AwsDeleteResponse struct {
+	Deleted bool `json:"deleted"`
+}
 type DeleteIntegrationsResponse struct {
 	Message string `json:"message"`
 }
@@ -29,6 +31,8 @@ type IntegrationsResponse struct {
 	IndexFailures  int         `json:"indexFailures"`
 	IsUnauthorized bool        `json:"isUnauthorized"`
 	LastUsed       string      `json:"lastUsed"`
+	ExternalId     string      `json:"externalId,omitempty"`
+	StackId        string      `json:"stackId,omitempty"`
 }
 type ApiList struct {
 	Message string `json:"message"`

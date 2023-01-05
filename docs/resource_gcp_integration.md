@@ -10,7 +10,7 @@ Provides an autobotAI Conformity Integration.
 # Instruction on how to create a Gcp Integration
 
 ## Required things 
-1. apikey
+1. apikey and url
 2. type,project_id,private_key_id,private_key,client_email,client_id,auth_uri,token_uri,auth_provider_x_cert_url,client_x_cert_url,alias,groups
 
 ## Steps 
