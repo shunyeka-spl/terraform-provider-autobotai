@@ -1,7 +1,7 @@
-package integration
+package autobotai
 
 import (
-	"autobotai_integration/pkg"
+	"autobotAI/pkg"
 	"context"
 
 	"strconv"

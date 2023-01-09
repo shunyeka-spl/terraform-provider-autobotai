@@ -1,7 +1,7 @@
 package main
 
 import (
-	"autobotai_integration/integration"
+	"autobotAI/autobotai"
 	"context"
 	"flag"
 	"log"
@@ -15,7 +15,7 @@ func main() {
 	flag.BoolVar(&debugMode, "debug", false, "set to true to run the provider with support for debuggers like delve")
 	flag.Parse()
 
-	opts := &plugin.ServeOpts{ProviderFunc: integration.Provider}
+	opts := &plugin.ServeOpts{ProviderFunc: autobotai.Provider}
 
 	if debugMode {
 		// TODO: update this string with the full name of your provider as used in your configs

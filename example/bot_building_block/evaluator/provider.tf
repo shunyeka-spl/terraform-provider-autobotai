@@ -5,7 +5,6 @@ terraform {
     }
   }
 }
-
 provider "autobotai" {
   apikey = var.apikey
   url = var.url
