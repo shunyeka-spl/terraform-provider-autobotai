@@ -1,7 +1,7 @@
-package integration
+package autobotai
 
 import (
-	"autobotai_integration/pkg"
+	"autobotAI/pkg"
 	"context"
 
 	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
@@ -34,6 +34,11 @@ func Provider() *schema.Provider {
 			"autobotai_git_integration":               resourceGitIntegration(),
 			"autobotai_external_id":                   resourceGetExternalId(),
 			"autobotai_aws_integration":               resourceAwsIntegration(),
+			"autobotai_fetcher":                       resourceFetcher(),
+			"autobotai_listener":                      resourceListener(),
+			"autobotai_automation":                    resourceAutomation(),
+			"autobotai_evaluator":                     resourceEvaluator(),
+			"autobotai_bot":                           resourceBot(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{},
 
@@ -50,7 +55,7 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 	if err != nil {
 		diags = append(diags, diag.Diagnostic{
 			Severity: diag.Error,
-			Summary:  "Unable to create Autobot client",
+			Summary:  "Unable to create autobotAI client",
 			Detail:   err.Error(),
 		})
 
