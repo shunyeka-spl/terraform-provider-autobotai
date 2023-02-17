@@ -55,8 +55,15 @@ func resourceFetcher() *schema.Resource {
 				Computed: true,
 			},
 			"data_keys": {
+				Type:     schema.TypeList,
+				Required: true,
+				Elem: &schema.Schema{
+					Type: schema.TypeMap,
+				},
+			},
+			"type": {
 				Type:     schema.TypeString,
-				Computed: true,
+				Required: true,
 			},
 			"code": {
 				Type:     schema.TypeString,
@@ -91,7 +98,8 @@ func resourceFetcherCreate(ctx context.Context, d *schema.ResourceData, m interf
 	payload.Code = d.Get("code").(string)
 	payload.Name = d.Get("name").(string)
 	payload.Clients = d.Get("clients")
-
+	payload.Type = d.Get("type").(string)
+	payload.DataKeys = d.Get("data_keys")
 	fetcherID, err := client.CreateFetcher(payload)
 	if err != nil {
 		return diag.FromErr(err)
@@ -151,6 +159,9 @@ func resourceFetcherRead(ctx context.Context, d *schema.ResourceData, m interfac
 	if err := d.Set("data_keys", fetcherResponse.DataKeys); err != nil {
 		return diag.FromErr(err)
 	}
+	if err := d.Set("type", fetcherResponse.Type); err != nil {
+		return diag.FromErr(err)
+	}
 	d.SetId(fetcherId)
 
 	return diags
@@ -168,13 +179,14 @@ func resourceFetcherUpdate(ctx context.Context, d *schema.ResourceData, m interf
 	payload.Clients = d.Get("clients")
 	payload.Arn = d.Get("arn").(string)
 	payload.CreatedAt = d.Get("created_at").(string)
-	payload.DataKeys = d.Get("data_keys").(string)
+	payload.DataKeys = d.Get("data_keys")
 	payload.DataSchema = d.Get("data_schema").(string)
 	payload.IsGlobal = d.Get("is_global").(bool)
 	payload.ResourceType = d.Get("resource_type").(string)
 	payload.RootUserId = d.Get("root_user_id").(string)
 	payload.UpdatedAt = d.Get("updated_at").(string)
 	payload.UserId = d.Get("user_id").(string)
+	payload.Type = d.Get("type").(string)
 	log.Println("[DEBUG] the payload is ", payload)
 	_, err := client.UpdateFetcher(fetcherId, payload)
 	if err != nil {

@@ -119,24 +119,47 @@ func createAutobotAIMock() (*pkg.Client, *httptest.Server) {
 			"lastUsed": null
 		}`
 
-		var fetcherResponse = `{
-			"_id": "63ab047dab813680c272f62e",
+		var fetcherResponse = `
+		{
+			"_id": "63ef28572f0ff602dbdcb842",
 			"resource_type": "fetcher",
-			"name": "testing",
-			"arn": "arn",
-			"root_user_id": "abc@shunyeka.com",
-			"user_id": "abc@shunyeka.com",
+			"name": "testing-fetcher-gcp",
+			"arn": "arn:fetcher:e16bef29e64157d797ca9f5d345b0c95:testing-fetcher-gcp",
+			"root_user_id": "amit@shunyeka.com",
+			"user_id": "amit@shunyeka.com",
 			"clients": [
-			  "NetworkManagementClient"
+				"gcp_audit_policy"
 			],
-			"code": "# 'clients' is a dict that contains all the clients mentioned in fetcher setup\n# 'test' is a boolean that could be used for conditional testing\n\ndef fetch(clients, test=False):\n    # To get the provided clients, proceed as per Example :\n    resource_client = clients['ResourceManagementClient']\n    # Retrieve the list of resource groups\n    resource_group_response = resource_client.resource_groups.list()\n    # <> Your Code goes here.\n\n    # resources=[]\n    # for resource_group in list(resource_group_response):\n    # # Retrieve the list of resources for each resource group\n    #     resource_list = resource_client.resources.list_by_resource_group(resource_group.name)\n    #     for resource in list(resource_list):\n    #         if resource.type=='Microsoft.Network/networkSecurityGroups':\n    #             resources.append({\n    #                 'id': resource.id,\n    #                 'name':resource.name,\n    #                 'type':resource.type,\n    #                 'region':resource.location,\n    #                 'resource_group_name':resource_group.name\n    #             })\n    # return resources\n",
-			"created_at": "2022-12-27T14:43:09.081000",
+			"code": "",
+			"created_at": "2023-02-17T07:10:15.491000",
 			"is_global": false,
-			"updated_at": "2022-12-27T14:44:38.603000",
-			"integration_type": "azure",
-			"data_schema": "",
-			"data_keys": ""
-		  }
+			"updated_at": "2023-02-17T07:10:15.491000",
+			"integration_type": "gcp",
+			"data_schema": null,
+			"data_keys": [
+				{
+					"name": "service.gcp_audit_policy",
+					"type": "str"
+				},
+				{
+					"name": "audit_log_configs.gcp_audit_policy",
+					"type": "str"
+				},
+				{
+					"name": "akas.gcp_audit_policy",
+					"type": "str"
+				},
+				{
+					"name": "location.gcp_audit_policy",
+					"type": "str"
+				},
+				{
+					"name": "project.gcp_audit_policy",
+					"type": "str"
+				}
+			],
+			"type": "no_code"
+		}
 		`
 		var listenerResponse = `{
 			"_id": "63b81e9a0e85d9b882b92903",
