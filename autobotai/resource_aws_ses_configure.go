@@ -56,10 +56,10 @@ func resourceAwsSesConfigureIntegration() *schema.Resource {
 				Type:     schema.TypeString,
 				Required: true,
 			},
-			// "depends_on": {
-			// 	Type:     schema.TypeString,
-			// 	Required: true,
-			// },
+			"dependson": {
+				Type:     schema.TypeString,
+				Required: true,
+			},
 			"integration_id": {
 				Type:     schema.TypeString,
 				Required: true,
@@ -96,7 +96,7 @@ func resourceAwsSesConfigureIntegrationCreate(ctx context.Context, d *schema.Res
 	payload.Payload.Region = d.Get("region").(string)
 	payload.Payload.IntegrationID = d.Get("integration_id").(string)
 	payload.Payload.CspName = d.Get("cspname").(string)
-	payload.DependsOn = payload.Payload.IntegrationID
+	payload.DependsOn = d.Get("dependson").(string)
 
 	awsSesConfigureIntegrationId, err := client.CreateAwsSesConfigureIntegration(payload)
 	if err != nil {
