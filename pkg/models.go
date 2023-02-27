@@ -12,7 +12,7 @@ type AzureIntegrations struct {
 		CspName        string      `json:"cspName"`
 	} `json:"payload"`
 }
-type AwsDeleteResponse struct {
+type DeleteResponse struct {
 	Deleted bool `json:"deleted"`
 }
 type DeleteIntegrationsResponse struct {
@@ -67,6 +67,16 @@ type AwsIntegrationResponse struct {
 	ExternalId      string `json:"externalId"`
 	TargetPrincipal string `json:"targetPrincipal"`
 }
+type AwsSesConfigure struct {
+	DependsOn string `json:"depends_on"`
+	Payload   struct {
+		Alias         string `json:"alias"`
+		Region        string `json:"region"`
+		IntegrationID string `json:"integration_id"`
+		CspName       string `json:"cspName"`
+	} `json:"payload"`
+}
+
 type MSTeamsIntegration struct {
 	Payload struct {
 		Alias   string      `json:"alias"`
@@ -109,6 +119,8 @@ type Fetcher struct {
 	Code             string      `json:"code"`
 	Integration_Type string      `json:"integration_type"`
 	Name             string      `json:"name"`
+	Type             string      `json:"type"`
+	DataKeys         interface{} `json:"data_keys"`
 }
 
 type Listener struct {
@@ -151,12 +163,13 @@ type FetcherResponse struct {
 	CreatedAt        string      `json:"created_at"`
 	UpdatedAt        string      `json:"updated_at"`
 	UserId           string      `json:"user_id"`
-	DataKeys         string      `json:"data_keys"`
+	DataKeys         interface{} `json:"data_keys"`
 	DataSchema       string      `json:"data_schema"`
 	Clients          interface{} `json:"clients"`
 	Code             string      `json:"code"`
 	Integration_Type string      `json:"integration_type"`
 	IsGlobal         bool        `json:"is_global"`
+	Type             string      `json:"type"`
 }
 
 type ListenerResponse struct {

@@ -16,9 +16,9 @@ func (c *Client) GetAwsInetgration(awsAccountId string) (*IntegrationsResponse, 
 
 	return &awsGetIntergration, nil
 }
-func (c *Client) DeleteAwsIntegration(AwsAccountId string) (*AwsDeleteResponse, error) {
+func (c *Client) DeleteAwsIntegration(AwsAccountId string) (*DeleteResponse, error) {
 
-	awsDeleteIntergration := AwsDeleteResponse{}
+	awsDeleteIntergration := DeleteResponse{}
 
 	_, err := c.ClientRequest(Delete{}, fmt.Sprintf("/integrations/%s", AwsAccountId), nil, "", &awsDeleteIntergration)
 
