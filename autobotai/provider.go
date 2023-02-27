@@ -35,6 +35,7 @@ func Provider() *schema.Provider {
 			"autobotai_external_id":                   resourceGetExternalId(),
 			"autobotai_aws_integration":               resourceAwsIntegration(),
 			"autobotai_aws_ses_configure_integration": resourceAwsSesConfigureIntegration(),
+			"autobotai_google_chat_integration":       resourceGoogleChatIntegration(),
 			"autobotai_fetcher":                       resourceFetcher(),
 			"autobotai_listener":                      resourceListener(),
 			"autobotai_automation":                    resourceAutomation(),
