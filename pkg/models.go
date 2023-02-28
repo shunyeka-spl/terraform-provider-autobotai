@@ -306,3 +306,12 @@ type Actions struct {
 	Type          string      `json:"type"`
 	ActionID      string      `json:"actionId"`
 }
+
+type GoogleChatIntegration struct {
+	Payload struct {
+		Alias   string      `json:"alias"`
+		Webhook string      `json:"webhook"`
+		Groups  interface{} `json:"groups"`
+		CspName string      `json:"cspName"`
+	} `json:"payload"`
+}
