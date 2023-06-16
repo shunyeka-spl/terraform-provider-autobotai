@@ -1,6 +1,6 @@
-# Instruction for how to use autobotAI Integrations
-    1. To use the autobotAI  Integrations add the ApiKey and url to the varibale.tf 
-    2. create "variable.tf" inside "example/integrations/(aws,azure,gcp,git,ms_teams,conformity,workload_security)" folder and add the following values:
+# Instruction for how to use autobotAI Integrations,Bot Building Block and Inventory
+    1. To use the autobotAI  Integrations, Bot Building Block and Inventory add the ApiKey and url to the varibale.tf 
+    2. create "variable.tf" inside "example/integrations/(aws,azure,gcp,git,ms_teams,conformity,workload_security)" or "example/bot_building_block/(automation,evaluator,fetcher,listener)" or "example/inventory/(inventory_schedule)" folder and add the following values:
         ## Example Usage 
         ```
         variable "apikey"{
@@ -41,10 +41,23 @@
              make install
 
             ```
-        3. Now, you can run the terraform code by navigating to "example/integrations/" folder:
+        3. Now, you can run the terraform code by navigating to "example/integrations/" or "example/bot_building_block" or "example/inventory" folder:
             ```
             cd example/integrations/(aws,azure,gcp,git,ms_teams,conformity,workload_security)
             terraform init
             terraform apply
+
+            OR
+
+            cd example/bot_building_block/(automation,evaluator,fetcher,listener)
+            terraform init
+            terraform apply
+
+            OR
+
+            cd example/inventory/(inventory_schedule)
+            terraform init
+            terraform apply
+
 
             ```

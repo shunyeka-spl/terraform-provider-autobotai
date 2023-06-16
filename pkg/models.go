@@ -16,7 +16,11 @@ type DeleteResponse struct {
 	Deleted bool `json:"deleted"`
 }
 type DeleteIntegrationsResponse struct {
-	Message string `json:"message"`
+	Message string `json:""`
+}
+
+type InventoryDeleteresponse struct {
+	Message bool `json:""`
 }
 type IntegrationsResponse struct {
 	ID             string      `json:"id,omitempty"`
@@ -314,4 +318,20 @@ type GoogleChatIntegration struct {
 		Groups  interface{} `json:"groups"`
 		CspName string      `json:"cspName"`
 	} `json:"payload"`
+}
+type InventorySchedule struct {
+	IntegrationId   string `json:"integration_id"`
+	IntegrationType string `json:"integration_type"`
+	CronExpression  string `json:"cron_expression"`
+}
+type InventoryScheduleResponse struct {
+	Id              string `json:"_id"`
+	IntegrationId   string `json:"integration_id"`
+	IntegrationType string `json:"integration_type"`
+	CronExpression  string `json:"cron_expression"`
+	RootUserID      string `json:"root_user_id"`
+	UserID          string `json:"user_id"`
+	RunAt           string `json:"run_at"`
+	CreatedAt       string `json:"created_at"`
+	UpdatedAt       string `json:"updated_at"`
 }

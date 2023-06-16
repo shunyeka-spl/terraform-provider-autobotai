@@ -41,6 +41,7 @@ func Provider() *schema.Provider {
 			"autobotai_automation":                    resourceAutomation(),
 			"autobotai_evaluator":                     resourceEvaluator(),
 			"autobotai_bot":                           resourceBot(),
+			"autobotai_inventory_schedule":            resourceInventorySchedule(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{},
 

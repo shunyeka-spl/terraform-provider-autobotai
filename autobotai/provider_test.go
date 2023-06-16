@@ -103,6 +103,23 @@ func createAutobotAIMock() (*pkg.Client, *httptest.Server) {
 		var putAutobotAIBot = regexp.MustCompile(`^/bots/(.*)$`)
 		var deleteAutobotAIBot = regexp.MustCompile(`^/bots/(.*)$`)
 
+		//Inventory Schedule
+		var postAutobotAIInventory = regexp.MustCompile(`^/inventory_schedules/$`)
+		var deleteAutobotAIInventory = regexp.MustCompile(`^/inventory_schedule/(.*)$`)
+		var inventoryResponse = `
+		{
+			"_id": "6412ec551a2c65c862f70d67",
+			"integration_id": "qwedwqdwq_sdnbnghncsdcdsdsc",
+			"cron_expression": "0 0 * * *",
+			"run_at": "2023-03-17T00:00:00",
+			"integration_type": "azure",
+			"root_user_id": "amit@shunyeka.com",
+			"user_id": "amit@shunyeka.com",
+			"created_at": "2023-03-16T10:15:47.419720",
+			"updated_at": "2023-03-16T10:15:49.260255"
+		}
+		`
+
 		var azureIntegrationResponse = `{
 			"userId": "user_id",
 			"accountId": "account_id",
@@ -283,6 +300,11 @@ func createAutobotAIMock() (*pkg.Client, *httptest.Server) {
 		}`
 		switch {
 
+		case postAutobotAIInventory.MatchString(r.URL.Path) && r.Method == "POST":
+			w.Write([]byte(inventoryResponse))
+		case deleteAutobotAIInventory.MatchString(r.URL.Path) && r.Method == "DELETE":
+			w.Write([]byte(`true`))
+
 		//Bot
 		case postAutobotAIBot.MatchString(r.URL.Path) && r.Method == "POST":
 			w.Write([]byte(botResponse))
@@ -343,6 +365,7 @@ func createAutobotAIMock() (*pkg.Client, *httptest.Server) {
 			w.Write([]byte(fetcherResponse))
 		case deleteAutobotAIFetcher.MatchString(r.URL.Path) && r.Method == "DELETE":
 			w.Write([]byte(`true`))
+
 		}
 
 	}))
