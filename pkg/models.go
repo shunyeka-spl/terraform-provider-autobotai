@@ -37,6 +37,8 @@ type IntegrationsResponse struct {
 	LastUsed       string      `json:"lastUsed"`
 	ExternalId     string      `json:"externalId,omitempty"`
 	StackId        string      `json:"stackId,omitempty"`
+	AgentIds       interface{} `json:"agent_ids"`
+	ConnectionType string      `json:"connection_type"`
 }
 type ApiList struct {
 	Message string `json:"message"`
@@ -334,4 +336,46 @@ type InventoryScheduleResponse struct {
 	RunAt           string `json:"run_at"`
 	CreatedAt       string `json:"created_at"`
 	UpdatedAt       string `json:"updated_at"`
+}
+type KubernetesIntegration struct {
+	Payload struct {
+		CspName      string      `json:"cspName"`
+		Alias        string      `json:"alias"`
+		Groups       interface{} `json:"groups"`
+		DeployedBots bool        `json:"deploy_bots"`
+	} `json:"payload"`
+}
+
+type Agents struct {
+	IntegrationId   string `json:"integration_id"`
+	IntegrationType string `json:"integration_type"`
+	Name            string `json:"name"`
+}
+type AgentsResponse struct {
+	Id              string `json:"_id"`
+	IntegrationId   string `json:"integration_id"`
+	IntegrationType string `json:"integration_type"`
+	Name            string `json:"name"`
+	RootUserID      string `json:"root_user_id"`
+	UserID          string `json:"user_id"`
+	CreatedAt       string `json:"created_at"`
+	UpdatedAt       string `json:"updated_at"`
+	Details         string `json:"details"`
+	Status          string `json:"status"`
+}
+type ApiKeys struct {
+	Name string `json:"name"`
+}
+type ApiKeysResponse struct {
+	Id           string `json:"_id"`
+	ResourceType string `json:"resource_type"`
+	Name         string `json:"name"`
+	Arn          string `json:"arn"`
+	RootUserId   string `json:"root_user_id"`
+	UserId       string `json:"user_id"`
+	ApiKeyId     string `json:"api_key_id"`
+	ApiKeySecret string `json:"api_key_secret"`
+	ExpiresOn    string `json:"expires_on"`
+	CreatedAt    string `json:"created_at"`
+	UpdatedAt    string `json:"updated_at"`
 }

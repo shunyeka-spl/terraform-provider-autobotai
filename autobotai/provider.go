@@ -42,6 +42,9 @@ func Provider() *schema.Provider {
 			"autobotai_evaluator":                     resourceEvaluator(),
 			"autobotai_bot":                           resourceBot(),
 			"autobotai_inventory_schedule":            resourceInventorySchedule(),
+			"autobotai_kubernetes_integration":        resourceKubernetesIntegration(),
+			"autobotai_agent":                         resourceAgent(),
+			"autobotai_apikey":                        resourceApiKey(),
 		},
 		DataSourcesMap: map[string]*schema.Resource{},
 
@@ -61,7 +64,6 @@ func providerConfigure(ctx context.Context, d *schema.ResourceData) (interface{}
 			Summary:  "Unable to create autobotAI client",
 			Detail:   err.Error(),
 		})
-
 		return nil, diags
 	}
 
