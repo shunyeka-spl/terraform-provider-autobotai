@@ -1,3 +1,5 @@
+# Instruction on how to create a GCP Integration
+
 ---
 page_title: "autobotai_gcp_integration"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_gcp_integration`
 Provides an autobotAI Conformity Integration.
 
-# Instruction on how to create a Gcp Integration
 
 ## Required things 
 1. apikey and url

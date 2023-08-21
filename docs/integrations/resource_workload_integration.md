@@ -1,3 +1,5 @@
+# Instruction on how to create a Workload Security Integration
+
 ---
 page_title: "autobotai_workload_security_integration"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_workload_security_integration`
 Provides an autobotAI Workload Security Integration.
 
-# Instruction on how to create a Workload Security Integration
 
 ## Required things 
 1. apikey and url

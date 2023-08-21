@@ -1,3 +1,5 @@
+# Instruction for how to create an Azure Integration
+
 ---
 page_title: "autobotai_azure_integration"
 description: |-

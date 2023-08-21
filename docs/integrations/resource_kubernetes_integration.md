@@ -1,3 +1,5 @@
+# Instruction on how to create a Kubernetes Integration
+
 ---
 page_title: "autobotai_kubernetes_integration"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_kubernetes_integration`
 Provides an autobotAI Kubernetes Integration.
 
-# Instruction on how to create a Kubernetes Integration
 
 ## Required things 
 1. apikey and url

@@ -1,3 +1,5 @@
+# Instruction on how to create a Git Integration
+
 ---
 page_title: "autobotai_git_integration"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_git_integration`
 Provides an autobotAI Git  Integration.
 
-# Instruction on how to create a Git Integration
 
 ## Required things 
 1. apikey and url

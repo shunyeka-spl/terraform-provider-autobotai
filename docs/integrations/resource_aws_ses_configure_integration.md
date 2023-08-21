@@ -1,3 +1,5 @@
+# Instruction for how to create an AWS SES  Integration
+
 ---
 page_title: "autobotai_aws_ses_configure_integration"
 description: |-

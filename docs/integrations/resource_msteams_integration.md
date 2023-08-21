@@ -1,3 +1,5 @@
+# Instruction on how to create a Ms Teams Integration
+
 ---
 page_title: "autobotai_ms_teams_integration"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_ms_teams_integration`
 Provides an autobotAI Ms Teams Integration.
 
-# Instruction on how to create a Ms Teams Integration
 
 ## Required things 
 1. apikey and url
