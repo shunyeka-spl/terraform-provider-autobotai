@@ -1,3 +1,4 @@
+# Instruction for how to Schedule an Inventory
 ---
 page_title: "autobotai_inventory_schedule"
 description: |-
