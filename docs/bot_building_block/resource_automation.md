@@ -1,4 +1,4 @@
-# Instruction for how to create a Automation
+# Instruction for how to create an Automation
 
 ---
 page_title: "autobotai_automation"
