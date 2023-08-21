@@ -1,3 +1,5 @@
+# Instruction for how to create a Bot
+
 ---
 page_title: "autobotai_bot"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_bot`
 Provides to create an autobotAI Bot
 
-# Instruction for how to create a Bot
 ## Required things 
 1. apikey and url
 2. name,topic,category,importance,fetcher_id,integration_id,integration_type,actions{type,automation_id,params{description,name,type,values},rer\quired,action_id}evaluator_id(you can pass the id from evaluator)

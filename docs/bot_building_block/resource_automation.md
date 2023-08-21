@@ -1,3 +1,5 @@
+# Instruction for how to create a Automation
+
 ---
 page_title: "autobotai_automation"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_automation`
 Provides to create an autobotAI Automation
 
-# Instruction for how to create a Automation
 ## Required things 
 1. apikey and url
 2. name, clients,code,title,type,integration_type,approval_required

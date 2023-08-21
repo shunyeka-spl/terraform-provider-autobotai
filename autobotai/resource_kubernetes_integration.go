@@ -66,7 +66,8 @@ func resourceKubernetesIntegrationRead(ctx context.Context, d *schema.ResourceDa
 func resourceKubernetesIntegrationUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
 
 	var diags diag.Diagnostics
-
+	resourceKubernetesIntegrationDelete(ctx, d, m)
+	resourceKubernetesIntegrationCreate(ctx, d, m)
 	return diags
 }
 

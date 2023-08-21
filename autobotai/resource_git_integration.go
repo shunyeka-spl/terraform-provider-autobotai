@@ -127,7 +127,7 @@ func resourceGitIntegrationRead(ctx context.Context, d *schema.ResourceData, m i
 	if err := d.Set("access_token", gitDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("create_dat", gitDetails.CreatedAt); err != nil {
+	if err := d.Set("created_at", gitDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("updated_at", gitDetails.UpdatedAt); err != nil {

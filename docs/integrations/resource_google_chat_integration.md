@@ -1,3 +1,4 @@
+# Instruction on how to create a Google Chat Integration
 ---
 page_title: "autobotai_google_chat_integration"
 description: |-
@@ -7,7 +8,6 @@ description: |-
 # Resource `autobotai_google_chat_integration`
 Provides an autobotAI Google Chat  Integration.
 
-# Instruction on how to create a Google Chat Integration
 
 ## Required things 
 1. apikey and url

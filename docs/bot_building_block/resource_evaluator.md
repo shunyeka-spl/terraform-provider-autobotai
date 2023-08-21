@@ -1,3 +1,5 @@
+# Instruction for how to create a Evaluator
+
 ---
 page_title: "autobotai_evaluator"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_evaluator`
 Provides to create an autobotAI Evaluator
 
-# Instruction for how to create a Evaluator
 ## Required things 
 1. apikey and url
 2. name, id(qb_rules), rules{id(rule_id),field,operator,value,value_score}, combinator,not,preference

@@ -133,10 +133,10 @@ func resourceConformityIntegrationRead(ctx context.Context, d *schema.ResourceDa
 	if err := d.Set("access_token", ConformityDetails.AccessToken); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("create_dat", ConformityDetails.CreatedAt); err != nil {
+	if err := d.Set("created_at", ConformityDetails.CreatedAt); err != nil {
 		return diag.FromErr(err)
 	}
-	if err := d.Set("update_dat", ConformityDetails.UpdatedAt); err != nil {
+	if err := d.Set("updated_at", ConformityDetails.UpdatedAt); err != nil {
 		return diag.FromErr(err)
 	}
 	if err := d.Set("index_failures", ConformityDetails.IndexFailures); err != nil {

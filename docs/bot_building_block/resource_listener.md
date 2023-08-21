@@ -1,3 +1,5 @@
+# Instruction for how to create a Listener
+
 ---
 page_title: "autobotai_listener"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_listener`
  Provides to create an autobotAI Listener
 
-# Instruction for how to create a Listener
 ## Required things 
 1. apikey and url
 2. description, webhook_source_integration_type,name

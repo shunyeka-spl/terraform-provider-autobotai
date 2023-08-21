@@ -1,3 +1,5 @@
+# Instruction for how to create a Fetcher
+
 ---
 page_title: "autobotai_fetcher"
 description: |-
@@ -7,7 +9,6 @@ description: |-
 # Resource `autobotai_fetcher`
  Provides to create an autobotAI Fetcher
 
-# Instruction for how to create a Fetcher
 ## Required things 
 1. apikey and url
 2. name, clients,code,integration_type
