@@ -1,20 +1,19 @@
-# Instruction for how to create an  AWS Integration
+# Guidance on Creating an AWS Integration
+
 ---
-page_title: "autobotai_aws_integration"
-description: |-
-  Provides an autobotAI Aws Integration.
+    page_title: "autobotai_aws_integration"
+    description: Enables the creation of an autobotAI AWS Integration
 ---
 
-# Resource `autobotai_aws_integration`
-Provides an autobotAI Aws Integration.
+## Resource `autobotai_aws_integration`
+ Discover how to set up an autobotAI AWS Integration
 
-# Instruction for how to create a Aws Integration
-## Required things for Fetching the ExternlId and TargetPrincipal
+## Prerequisites for fetching the ExternlId and TargetPrincipal
 1. apikey and url
 2. alias,groups and deploy_bots
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/integrations/aws" folder for autobotAI Aws Integration, create the file if not exists and add the following values:
+1. Create a Terraform file named "main.tf" within the "example/integrations/aws" directory for setting up autobotAI AWS Integration. If the file doesn't exist, create it and input the following values:
     ## Example Usage 
     ```
         resource "autobotai_external_id" "aws"{
@@ -22,7 +21,7 @@ Provides an autobotAI Aws Integration.
         groups=["test"]
     } 
     ```
-2. For creating the Cloud Formation Stack add the following values to "main.tf" and also add the aws required providers and credentials to "provider.tf"
+2. For creating the Cloud Formation Stack, add the following values to the "main.tf" file, and also include the required AWS providers and credentials in the "provider.tf" file:
     ## Example Usage(in main.tf)
     ```
         resource "aws_cloudformation_stack" "autobotai_cloud_formation" {
@@ -55,4 +54,4 @@ Provides an autobotAI Aws Integration.
         }
 
     ``` 
-3. To use the autobotAI Aws Integration follow the "index.md"
+3. For implementing autobotAI AWS Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.

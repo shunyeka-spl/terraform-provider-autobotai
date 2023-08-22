@@ -1,2 +1,3 @@
-# terraform-provider-autobotai
-Terraform provider for autobotAI (https://autobot.live)
+# Documentation
+
+- [terraform-provider-autobotAI](https://registry.terraform.io/providers/shunyeka-spl/autobotai/latest/docs)

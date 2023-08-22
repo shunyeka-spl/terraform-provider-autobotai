@@ -1,20 +1,19 @@
-# Instruction for how to create a Listener
+# Guidance on Creating a Listener
 
 ---
-page_title: "autobotai_listener"
-description: |-
-  Provides to create an autobotAI Listener
+    page_title: "autobotai_listener"
+    description: Enables the creation of an autobotAI Listener
 ---
 
-# Resource `autobotai_listener`
- Provides to create an autobotAI Listener
+## Resource `autobotai_listener`
+ Discover how to set up an autobotAI Fetcher
 
-## Required things 
+## Prerequisites
 1. apikey and url
 2. description, webhook_source_integration_type,name
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/bot_building_block/listener" folder for autobotAI Listener, create the file if not  exists and add the following values:
+1. Craft a Terraform file named "main.tf" within the "example/bot_building_block/listener" directory to establish an autobotAI Listener. If the file does not already exist, create it and incorporate the subsequent values:
     ## Example Usage 
     ```
     resource "autobotai_listener" "listener" {
@@ -24,4 +23,4 @@ description: |-
     }
   
     ```
-2. To use the autobotAI Fetcher follow the "index.md"
+2. For implementing autobotAI Listener, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.

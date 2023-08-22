@@ -1,23 +1,22 @@
-# Instruction for how to create a Bot
+# Guidance on Creating a Bot
 
 ---
-page_title: "autobotai_bot"
-description: |-
-  Provides to create an autobotAI Bot
+    page_title: "autobotai_bot"
+    description: Enables the creation of an autobotAI Bot
 ---
 
-# Resource `autobotai_bot`
-Provides to create an autobotAI Bot
+## Resource `autobotai_bot`
+Discover how to set up an autobotAI Bot
 
-## Required things 
+## Prerequisites 
 1. apikey and url
 2. name,topic,category,importance,fetcher_id,integration_id,integration_type,actions{type,automation_id,params{description,name,type,values},rer\quired,action_id}evaluator_id(you can pass the id from evaluator)
 
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/bot_building_block/evaluator" folder for autobotAI Bot, create the file if not  exists and add the following values:
+1. Create a "main.tf" Terraform file within the "example/bot_building_block/evaluator" directory for autobotAI Bot. If the file doesn't exist, create it, and input the following values:
 
-2. Note - you need to add the bot resource  after the evaluator resource in evaluator/main.tf
+2. Notably, ensure you place the bot resource after the evaluator resource in the "evaluator/main.tf" file.
 
     ## Example Usage
     ```
@@ -45,4 +44,4 @@ Provides to create an autobotAI Bot
     }
 
     ```   
-3. To use the autobotAI Bot  follow the "index.md"
+3. For implementing autobotAI Bot, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
