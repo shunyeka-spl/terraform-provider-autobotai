@@ -1,20 +1,19 @@
-# Instruction for how to create a Fetcher
+# Guidance on Creating a Fetcher
 
 ---
-page_title: "autobotai_fetcher"
-description: |-
-  Provides to create an autobotAI Fetcher
+    page_title: "autobotai_fetcher"
+    description: Enables the creation of an autobotAI Fetcher.
 ---
 
-# Resource `autobotai_fetcher`
- Provides to create an autobotAI Fetcher
+## Resource `autobotai_fetcher`
+ Discover how to set up an autobotAI Fetcher
 
-## Required things 
+## Prerequisites
 1. apikey and url
 2. name, clients,code,integration_type
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/bot_building_block/fetcher" folder for autobotAI Fetcher, create the file if not  exists and add the following values:
+1. Generate a Terraform file named "main.tf" within the "example/bot_building_block/fetcher" directory to create an autobotAI Fetcher. If the file does not exist, create it, and include the following content:
     ## Example Usage 
     ```
     resource "autobotai_fetcher" "fetcher" {
@@ -25,4 +24,4 @@ description: |-
     }
   
     ```
-2. To use the autobotAI Fetcher follow the "index.md"
+2. For implementing autobotAI fetcher, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.

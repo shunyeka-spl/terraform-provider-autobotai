@@ -1,21 +1,19 @@
-# Instruction for how to create an AWS SES  Integration
+# Guidance on Creating an AWS SES Integration
 
 ---
-page_title: "autobotai_aws_ses_configure_integration"
-description: |-
-  Provides an autobotAI Aws Ses Configure Integration.
+    page_title: "autobotai_aws_ses_configure_integration"
+    description: Enables the creation of an autobotAI AWS SES Integration
 ---
 
-# Resource `autobotai_aws_ses_configure_integration`
-Provides an autobotAI Aws Ses Configure Integration.
+## Resource `autobotai_aws_ses_configure_integration`
+ Discover how to set up an autobotAI AWS SES Integration
 
-# Instruction for how to create a Aws Ses Configure Integration
-## Required things 
+## Prerequisites
 1. apikey and url
 2. alias, region,integration_id
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/integrations/aws_ses_configure" folder for autobotAI Aws Ses Configure Integration, create the file if not  exists and add the following values:
+1. Create terraform "main.tf" inside "example/integrations/aws_ses_configure" folder for autobotAI AWS SES Configure Integration.If the file doesn't exist, create it and input the following values:
     ## Example Usage 
     ```
         resource "autobotai_aws_ses_configure_integration" "aws_ses" {
@@ -25,4 +23,4 @@ Provides an autobotAI Aws Ses Configure Integration.
         
     }   
     ```
-2. To use the autobotAI Azure Integration follow the "index.md"
+2. For implementing autobotAI AWS SES Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.

@@ -1,22 +1,21 @@
-# Instruction on how to create a Kubernetes Integration
+# Guidance on Creating a Kubernetes Integration
 
 ---
-page_title: "autobotai_kubernetes_integration"
-description: |-
-  Provides an autobotAI Kubernetes Integration.
+    page_title: "autobotai_kubernetes_integration"
+    description: Enables the creation of an autobotAI Kubernetes  Integration
 ---
 
-# Resource `autobotai_kubernetes_integration`
-Provides an autobotAI Kubernetes Integration.
+## Resource `autobotai_kubernetes_integration`
+Discover how to set up an autobotAI Kubernetes Integration
 
 
-## Required things 
+## Prerequisites 
 1. apikey and url
 2. alias,groups,deploy_bots
 3. name (for agent)
 
 ## Steps 
-1. Create terraform "main.tf" inside "example/integrations/kubernetes" folder for autobotAI kubernetes Integration, create the file if not exists and add the following vallues:
+1. Create terraform "main.tf" inside "example/integrations/kubernetes" folder for autobotAI kubernetes Integration. If the file doesn't exist, create it and input the following values:
     ## Example Usage 
     ```
         resource "autobotai_kubernetes_integration" "kubernetes" {
@@ -35,4 +34,4 @@ Provides an autobotAI Kubernetes Integration.
             name = autobotai_agent.agent.name
         }
     ```
-2. To use the autobotAI kubernetes Integration follow the "provider_setup.md"
+2. For implementing autobotAI Kubernetes Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
