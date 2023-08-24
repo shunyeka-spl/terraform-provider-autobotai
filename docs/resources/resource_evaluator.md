@@ -56,4 +56,4 @@ Note - you can define multiple rules
     - After the evaluator is created, you'll need to create a bot. 
     - Refer to the guidance provided in the [Bot-Creation](resource_bot.md) document for step-by-step instructions on how to create a Bot.
  
-2. For implementing autobotAI Evaluator, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
+2. For implementing autobotAI Evaluator, refer to the instructions provided in the [autobotAI-Provider-Guidance](provider_guidance.md) document.

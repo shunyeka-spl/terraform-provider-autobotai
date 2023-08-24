@@ -24,4 +24,4 @@ Discover how to set up an autobotAI Conformity Integration
     region=["ap-south-1"]
     }
     ```
-2. For implementing autobotAI Conformity Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
+2. For implementing autobotAI Conformity Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](provider_guidance.md) document.

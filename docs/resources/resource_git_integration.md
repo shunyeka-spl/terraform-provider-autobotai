@@ -25,4 +25,4 @@ Discover how to set up an autobotAI Git Integration
 
       }
     ```
-2. For implementing autobotAI Git Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
+2. For implementing autobotAI Git Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](provider_guidance.md) document.
