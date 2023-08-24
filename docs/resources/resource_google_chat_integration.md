@@ -22,4 +22,4 @@ Discover how to set up an autobotAI Google Chat Integration
         webhook="webhook"
     }
     ```
-2. For implementing autobotAI Google Chat Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
+2. For implementing autobotAI Google Chat Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](provider_guidance.md) document.

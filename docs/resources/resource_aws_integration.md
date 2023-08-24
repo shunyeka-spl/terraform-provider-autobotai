@@ -54,4 +54,4 @@
         }
 
     ``` 
-3. For implementing autobotAI AWS Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](../autobotAI_provider_guidance.md) document.
+3. For implementing autobotAI AWS Integration, refer to the instructions provided in the [autobotAI-Provider-Guidance](provider_guidance.md) document.
